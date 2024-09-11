@@ -29,6 +29,7 @@ const DetailsCard = ({
 }: CharacterCardProps) => {
   console.log('🚀 ~ file: DetailsCard.tsx:30 ~ status:', status);
   return (
+    
     <ScrollView>
       <View style={styles.container}>
         <View>
@@ -51,11 +52,7 @@ const DetailsCard = ({
                   width: 15,
                   borderRadius: 10,
                   backgroundColor:
-                    status === 'Alive'
-                      ? 'green'
-                      : status === 'unknown'
-                      ? 'yellow'
-                      : 'red',
+                    status === 'Alive' ? 'green' : status === 'unknown' ? 'yellow': 'red',
                 }}
               />
 
@@ -72,6 +69,7 @@ const DetailsCard = ({
 };
 
 export default DetailsCard;
+
 
 const styles = StyleSheet.create({
   container: {
