@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView, StatusBar, StyleSheet, ActivityIndicator } fr
 import React , {useState, useEffect} from 'react'
 import type { PropsWithChildren } from 'react'
 import { setupPlayer, addTrack } from '../musicPlayerServices'
+import MusicPlayer from './screens/MusicPlayer'
 
 const App = () => {
 const [isPlayerReady, setIsPlayerReady] = useState(false)
@@ -28,18 +29,15 @@ if(!isPlayerReady) {
 }
 
   return (
-   <SafeAreaView>
-     <StatusBar/>
- 
-     <Text>Testing app</Text>
-
-   </SafeAreaView>
+  <View style={styles.container }>
+    <StatusBar barStyle={"light-content"} />
+    <MusicPlayer/>
+  </View>
   )
 }
 
-const style = StyleSheet.create({
-
-  container: {
+const styles = StyleSheet.create({
+ container: {
     flex: 1
   }
 })

@@ -16,7 +16,8 @@ export const playListData: Track[] = [
     artist: 'Wizkid',
     album: 'Afrobeatz',
     artwork:
-      " 	https://encrypted-tbn0.gstatic.com/images?q=tbn:AN…d9qkfM--rJR3-g0uGmv01tTRsK0g3I-ETj_beh&usqp=CAE&s	https://encrypted-tbn0.gstatic.com/images?q=tbn:AN…d9qkfM--rJR3-g0uGmv01tTRsK0g3I-ETj_beh&usqp=CAE&s",
+      "	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThfGtX5NN2MbenfHjTqDeVaD7Hmx-RBgZEAw&s"
+,
     url: require('./assets/audio2.mp3'),
   },
   {
@@ -25,12 +26,12 @@ export const playListData: Track[] = [
     artist: 'DeLight',
     album: 'stylish futuristic chill',
     artwork:
-      '	data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…REQEREBERAREQEREBERAREQEREBERAREQEREBERAuREQP/9k=',
+      "https://lh3.googleusercontent.com/ogw/AF2bZyhUVbQiYGAC6gBs9Q9cWPlECgREVGXHtHSuG7SRH2uHhxU=s64-c-mo" ,
     url: require('./assets/audio3.mp3'),
   },
   {
     id: 4,
-    title: 'Title Track',
+    title: " Sound Track",
     artist: 'Dj Ife',
     album: 'Beatz',
     artwork:

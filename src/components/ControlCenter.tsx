@@ -3,6 +3,7 @@ import React from 'react'
 import TrackPlayer, { State, usePlaybackState } from 'react-native-track-player'
 import { playbackService } from '../../musicPlayerServices'
 import Icon from 'react-native-vector-icons/MaterialIcons'
+import { RepeatMode } from 'react-native-track-player';
 
 
 const ControlCenter = () => {
@@ -16,6 +17,10 @@ const ControlCenter = () => {
   // previous button
   const SkipToPrevious = async () => {
     await TrackPlayer.skipToPrevious()
+  }
+  // Repeat 
+  const RepeatSong = async () => {
+    await RepeatMode.Queue
   }
 
   const togglePlayback = async (playback: State) => {
@@ -40,12 +45,18 @@ const ControlCenter = () => {
         <Icon style={styles.icon} name="skip-previous" size={40}/>
       </Pressable>
       <Pressable  
-     onPress={() => togglePlayback(playBackState)} >
-        <Icon style={styles.icon} name={playBackState === State.Playing ? "pause" : "play-arrow " } size={75}/>
+     onPress={() => { if(playBackState.state !== undefined){
+      return  togglePlayback(playBackState.state)
+     }}} >
+        <Icon style={styles.icon} name={playBackState.state === State.Playing ? "pause" : "play-arrow" } size={75}/>
       </Pressable>
       <Pressable  
       onPress={()=> SkipToNext()} >
-        <Icon style={styles.icon} name="skip-previous" size={40}/>
+        <Icon style={styles.icon} name="skip-next" size={40}/>
+      </Pressable>
+      <Pressable  
+      onPress={()=> RepeatSong()} >
+        <Icon style={styles.icon} name="restart_alt" size={40}/>
       </Pressable>
 
     </View>
