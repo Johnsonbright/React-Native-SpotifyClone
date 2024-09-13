@@ -19,9 +19,9 @@ const ControlCenter = () => {
     await TrackPlayer.skipToPrevious()
   }
   // Repeat 
-  const RepeatSong = async () => {
-    await RepeatMode.Queue
-  }
+  // const RepeatSong = async () => {
+  //   await RepeatMode.Queue
+  // }
 
   const togglePlayback = async (playback: State) => {
     const currentTrack = await TrackPlayer.getActiveTrack()
@@ -54,10 +54,10 @@ const ControlCenter = () => {
       onPress={()=> SkipToNext()} >
         <Icon style={styles.icon} name="skip-next" size={40}/>
       </Pressable>
-      <Pressable  
+      {/* <Pressable  
       onPress={()=> RepeatSong()} >
         <Icon style={styles.icon} name="restart_alt" size={40}/>
-      </Pressable>
+      </Pressable> */}
 
     </View>
   )
