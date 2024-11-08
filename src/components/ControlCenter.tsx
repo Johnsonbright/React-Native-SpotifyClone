@@ -42,17 +42,17 @@ const ControlCenter = () => {
     <View style={styles.container}>
       <Pressable  
       onPress={()=>SkipToPrevious()} >
-        <Icon style={styles.icon} name="skip-previous" size={40}/>
+        <Icon style={styles.icon} name="skip-previous" size={42}/>
       </Pressable>
       <Pressable  
      onPress={() => { if(playBackState.state !== undefined){
       return  togglePlayback(playBackState.state)
      }}} >
-        <Icon style={styles.icon} name={playBackState.state === State.Playing ? "pause" : "play-arrow" } size={75}/>
+        <Icon style={styles.icon} name={playBackState.state === State.Playing ? "pause" : "play-arrow" } size={77}/>
       </Pressable>
       <Pressable  
       onPress={()=> SkipToNext()} >
-        <Icon style={styles.icon} name="skip-next" size={40}/>
+        <Icon style={styles.icon} name="skip-next" size={42}/>
       </Pressable>
       {/* <Pressable  
       onPress={()=> RepeatSong()} >
