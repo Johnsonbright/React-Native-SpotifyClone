@@ -42,7 +42,7 @@ const ControlCenter = () => {
     <View style={styles.container}>
       <Pressable  
       onPress={()=>SkipToPrevious()} >
-        <Icon style={styles.icon} name="skip-previous" size={42}/>
+        <Icon style={styles.icon} name="skip-previous" size={43}/>
       </Pressable>
       <Pressable  
      onPress={() => { if(playBackState.state !== undefined){
